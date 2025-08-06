@@ -47,7 +47,7 @@ def tampilkan_peminjaman():
         print(i + 1,". \tISBN\t: ",records[i]["isbn"],"\n"
               ,"\tStatus\t:",records[i]["status"],"\n",
               "\tPengarang\t:",records[i]["tanggal_pinjam"],"\n",
-              "\tJumlah Buku\t:",records[i]["tanggal_kembali"],"\n",)
+              "\tTanggal Kembali\t:",records[i]["tanggal_kembali"],"\n",)
 
 def tampilkan_belum():
     nomor = 1
@@ -65,7 +65,7 @@ def peminjaman():
     tanggal_pinjam = input("Masukan tanggal pinjam (YYYY-MM-DD): ")
     books[Ipinjam]["jumlah"] =- 1 
     books[Ipinjam]["terpinjam"] =+ 1 
-    records.append({"isbn": Ipinjam, "nama": nama, "status": "Belum", "tanggal_pinjam": tanggal_pinjam, "tanggal_kembali": ""})
+    records.append({"isbn": Ipinjam, "status": "Belum", "tanggal_pinjam": tanggal_pinjam, "tanggal_kembali": ""})
 
 
 def pengembalian():
@@ -78,8 +78,8 @@ def pengembalian():
                 if record["isbn"] == Ipinjam:
                     i["jumlah"] -= 1
                     i["terpinjam"] += 1
-                    record["tanggal_kembali"] = input("Masukan tanggal kembali (YYYY-MM-DD): ")
-                    record["status"] = "Selesai"
+                    i["tanggal_kembali"] = input("Masukan tanggal kembali (YYYY-MM-DD): ")
+                    i["status"] = "Selesai"
                            
 
 
