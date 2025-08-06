@@ -65,7 +65,7 @@ def peminjaman():
     tanggal_pinjam = input("Masukan tanggal pinjam (YYYY-MM-DD): ")
     books[Ipinjam]["jumlah"] =- 1 
     books[Ipinjam]["terpinjam"] =+ 1 
-    records.append({"isbn": Ipinjam, "nama": nama, "status": "belum", "tanggal_pinjam": tanggal_pinjam, "tanggal_kembali": ""})
+    records.append({"isbn": Ipinjam, "nama": nama, "status": "Belum", "tanggal_pinjam": tanggal_pinjam, "tanggal_kembali": ""})
 
 
 def pengembalian():
